@@ -1,0 +1,22 @@
+1) Start zookeeper:
+zookeeper-server-start.bat C:\dev\kafka\config\zookeeper.properties
+
+2) Start kafka:
+kafka-server-start.bat c:\dev\kafka\config\server.properties
+
+
+3) Listar tocpis
+kafka-topics --bootstrap-server localhost:9092 --list
+
+## Criando topics
+kafka-topics --bootstrap-server localhost:9092 --create --topic <NOME_TOPIC>
+ex:
+kafka-topics --bootstrap-server localhost:9092 --create --topic teste
+
+
+### Com particoes:
+kafka-topics --bootstrap-server localhost:9092 --create --topic <NOME_TOPIC> --partitions <BR_PARTICOES>
+ex:
+kafka-topics --bootstrap-server localhost:9092 --create --topic teste --partitions 16
+
+
